@@ -61,10 +61,9 @@ slug.color = "Red";
 console.log(roach);
 console.log(tiger);
 console.log(slug);
-console.log(Car);
 
 // var writeOut =  document.getElementById("mainOutput");
-// writeOut.innerHTML = this; 
+// writeOut.innerHTML = JSON.stringify(tiger);  
 
 
 
