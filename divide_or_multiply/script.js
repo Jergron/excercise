@@ -13,8 +13,6 @@ var userInput = document.getElementById("insert");
 var button = document.getElementById("click");
 var userOutput = document.getElementById("answer");
 
-
-
 function divide(a) {
   return a / 10;
 }
@@ -24,19 +22,25 @@ function multiply(b) {
 }
 
 function noVal() {
-  return alert("Please, enter something!")
+  return alert("Give me your digits!")
+}
+
+function clearInput () {
+	return userInput.value = "";
 }
 	
 function checkVal() {
     if (userInput.value === "") {
     	noVal();
+    	userOutput.innerHTML = "You better give me some REAL digits!"
     }
-	if (userInput.value > 10000) {
-		userOutput.innerHTML += divide(userInput.value)
+	else if (userInput.value > 10000) {
+		userOutput.innerHTML = divide(userInput.value)
 	}
-	if (userInput.value < 10000) {
-		userOutput.innerHTML += multiply(userInput.value)
+	else if (userInput.value < 10000) {
+		userOutput.innerHTML = multiply(userInput.value)
 	}
+	clearInput();
 }
 
 button.onclick = checkVal;
