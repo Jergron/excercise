@@ -14,7 +14,7 @@ var button = document.getElementById("click");
 var userOutput = document.getElementById("answer");
 
 function divide(a) {
-  return a / 10;
+  return a/10;
 }
 
 function multiply(b) {
@@ -26,21 +26,21 @@ function noVal() {
 }
 
 function clearInput () {
-	return userInput.value = "";
+  return userInput.value = "";
 }
 	
 function checkVal() {
-    if (userInput.value === "") {
-    	noVal();
-    	userOutput.innerHTML = "You better give me some REAL digits!"
-    }
-	else if (userInput.value > 10000) {
-		userOutput.innerHTML = divide(userInput.value)
-	}
-	else if (userInput.value < 10000) {
-		userOutput.innerHTML = multiply(userInput.value)
-	}
-	clearInput();
+  if (userInput.value === "") {
+  	noVal();
+  	userOutput.innerHTML = "You better give me some REAL digits!"
+  }
+  else if (userInput.value > 10000) {
+  	userOutput.innerHTML = divide(userInput.value)
+  }
+  else if (userInput.value < 10000) {
+  	userOutput.innerHTML = multiply(userInput.value)
+  }
+  clearInput();
 }
 
 button.onclick = checkVal;
